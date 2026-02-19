@@ -2,48 +2,36 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    
-    <!-- 
-      VIEWPORT : Optimisé pour iOS
-      viewport-fit=cover : Permet d'utiliser tout l'écran (y compris l'encoche)
-      user-scalable=no : Empêche le zoom accidentel (sensation d'application native)
-    -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 
-    <!-- TITRE -->
+    <!-- 
+      VIEWPORT: viewport-fit=cover fills the entire screen including notch/home indicator areas.
+      Content must then use env(safe-area-inset-*) to avoid being hidden.
+    -->
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" 
+    />
+
     <title>LifeBalance</title>
 
-    <!-- FAVICON (Navigateur Web) -->
-    <!-- ⚠️ Note le /lifebalance/ au début du chemin -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/lifebalance/logo.png" />
 
-    <!-- 
-      CONFIGURATION iOS PWA 
-      C'est ce qui fait que ça ressemble à une app sur l'iPhone
-    -->
+    <!-- iOS PWA Configuration -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="LifeBalance" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
-    
-    <!-- Couleurs de la barre de statut -->
+
+    <!-- Theme Colors -->
     <meta name="theme-color" content="#FFFAF5" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#12141C" media="(prefers-color-scheme: dark)" />
 
-    <!-- 
-      ICÔNES iOS 
-      ⚠️ CRUCIAL : J'ai ajouté "/lifebalance/" devant tous les liens.
-      Sans ça, l'iPhone ne trouve pas l'image.
-    -->
+    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="/lifebalance/apple-touch-icon.png" />
-    <!-- Si tu as les autres tailles, décommente et assure-toi qu'elles sont dans public/ -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/lifebalance/apple-touch-icon-180.png" /> -->
 
-    <!-- 
-      ÉCRANS DE DÉMARRAGE (Splash Screens)
-      ⚠️ J'ai corrigé tous les chemins pour inclure /lifebalance/splash/ 
-    -->
+    <!-- Splash Screens -->
     <link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)" href="/lifebalance/splash/splash-1290x2796.png" />
     <link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)" href="/lifebalance/splash/splash-1179x2556.png" />
     <link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)" href="/lifebalance/splash/splash-1170x2532.png" />
@@ -53,13 +41,10 @@
     <link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="/lifebalance/splash/splash-2048x2732.png" />
     <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="/lifebalance/splash/splash-1668x2388.png" />
 
-    <!-- 
-      MANIFESTE (Géré par Vite Plugin PWA, mais on le force ici pour être sûr)
-      ⚠️ Note le /lifebalance/ ici aussi
-    -->
+    <!-- Manifest -->
     <link rel="manifest" href="/lifebalance/manifest.webmanifest" />
-    <script type="module" crossorigin src="/lifebalance/assets/index-CVlUJWNI.js"></script>
-    <link rel="stylesheet" crossorigin href="/lifebalance/assets/index-CRvKz8FP.css">
+    <script type="module" crossorigin src="/lifebalance/assets/index-BW7Tjty9.js"></script>
+    <link rel="stylesheet" crossorigin href="/lifebalance/assets/index-FtLMounW.css">
   <link rel="manifest" href="/lifebalance/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/lifebalance/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
